@@ -29,13 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CardList name="Yassine"> 
-        {
-          this.state.monsters.map(monster => (
-            <p key={monster.id}>{`${monster.name}`}</p>
-          ))    
-        }
-        </CardList>
+        <CardList monsters={this.state.monsters} />
       </div>
     );
   }
