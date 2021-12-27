@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React , {Component} from 'react'
+import { CardList } from './components/card-list/card-list.component';
+
 
 class App extends Component {
 
@@ -21,18 +23,19 @@ class App extends Component {
       monsters : res
     } , () => console.log(this.state.monsters))
     )
-
   }
 
 
   render() {
     return (
       <div className="App">
+        <CardList name="Yassine"> 
         {
           this.state.monsters.map(monster => (
             <p key={monster.id}>{`${monster.name}`}</p>
           ))    
         }
+        </CardList>
       </div>
     );
   }
