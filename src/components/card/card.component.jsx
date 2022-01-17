@@ -5,7 +5,8 @@ import './card.styles.scss'
 export const Card = ({monster}) => (
 
     <div className='card-container'>
-        <img className='' src={`https://robohash.org/${monster.id}?set=set1`}/>
-        <p>{monster.name}</p>
+        <img className='' src={`https://robohash.org/${monster.id}?set=set1&size=180x180`}/>
+        <h2>{monster.name}</h2>
+        <p>{monster.email}</p>
     </div>
 )
